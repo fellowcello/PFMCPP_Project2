@@ -205,27 +205,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    takeASeat(true, 100);
     //2)
-    
+    auto dollarsConverted = yenToDollars(100);
     //3)
-    
+    auto square1Area = findArea(120, 240);
     //4)
-    
+    auto cycle1Result = determineResult(true, false);
     //5)
-    
+    mainMenu(false);
     //6)
-    
+    loadRecipe(1000, 12000, 3000);
     //7)
-    
+    auto garyAge = findAge(1992, 11, 22);
     //8)
-    
+    auto lineWeightPen = findLineWeight(6, 0.1f);
     //9)
-    
+    auto tacoToppingsFit = doesFit(26, 24);
     //10)
+    logData(233, false, 1.25f);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, dollarsConverted, square1Area, cycle1Result, garyAge, lineWeightPen, tacoToppingsFit);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
