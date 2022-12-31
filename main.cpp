@@ -15,12 +15,12 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ char
+ unsigned int
  
  
  
@@ -64,10 +64,28 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+
+    int myInt1 = 1;
+    int myInt2 = 2;
+    int myInt3 = 3;
+    float myFloat1 = 4.0f;
+    float myFloat2 = 5.0f;
+    float myFloat3 = 6.0f;
+    bool myBool1 = false;
+    bool myBool2 = true;
+    bool myBool3 = false;
+    double myDouble1 = 7;
+    double myDouble2 = 8;
+    double myDouble3 = 9;
+    char myChar1 = 'a';
+    char myChar2 = 'b';
+    char myChar3 = 'c';
+    unsigned int myUnsignedInt1 = 10;
+    unsigned int myUnsignedInt2 = 11;
+    unsigned int myUnsignedInt3 = 12;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, myInt1, myInt2, myInt3, myFloat1, myFloat2, myFloat3, myBool1, myBool2, myBool3, myDouble1, myDouble2, myDouble3, myChar1, myChar2, myChar3, myUnsignedInt1, myUnsignedInt2, myUnsignedInt3); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,42 +102,88 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+void takeASeat(bool isFront, int maximumWeightLbs)
+{
+    ignoreUnused(isFront, maximumWeightLbs);
+}
 
 /*
  2)
  */
+int convertYenToDollars(int yen)
+{
+    ignoreUnused(yen);
+    return {};
+}
 
 /*
  3)
  */
+int findArea(int width = 10, int height = 10)
+{
+    ignoreUnused(width, height);
+    return {};
+}
 
 /*
  4)
  */
+bool determineResult(bool resultA = false, bool resultB = false)
+{
+    ignoreUnused(resultA, resultB);
+    return {};
+}
 
 /*
  5)
  */
+void fillMainMenu(bool isFront)
+{
+    ignoreUnused(isFront);
+}
 
 /*
  6)
  */
+void loadRecipe(int voltage, int current, int flux = 7000)
+{
+    ignoreUnused(voltage, current, flux);
+}
 
 /*
  7)
  */
+int findAge(int birthYear, int birthMonth, int birthDay)
+{
+    ignoreUnused(birthYear, birthMonth, birthDay);
+    return {};
+}
 
 /*
  8)
  */
+float findLineWeight(int pressureLbsSqIn, float tipDiameterInches)
+{
+    ignoreUnused(pressureLbsSqIn, tipDiameterInches);
+    return {};
+}
 
 /*
  9)
  */
+bool doesFit(int inputVar, int limit)
+{
+    ignoreUnused(inputVar, limit);
+    return {};
+}
 
 /*
  10)
  */
+void logData(int buttonPresses, bool isGood, float lengthInches = 1.0f)
+{
+    ignoreUnused(buttonPresses, isGood, lengthInches);
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,27 +205,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    takeASeat(true, 100);
     //2)
-    
+    auto dollarsConverted = convertYenToDollars(100);
     //3)
-    
+    auto square1Area = findArea(120, 240);
     //4)
-    
+    auto cycle1Result = determineResult(true, false);
     //5)
-    
+    fillMainMenu(false);
     //6)
-    
+    loadRecipe(1000, 12000, 3000);
     //7)
-    
+    auto garyAge = findAge(1992, 11, 22);
     //8)
-    
+    auto lineWeightPen = findLineWeight(6, 0.1f);
     //9)
-    
+    auto tacoToppingsFit = doesFit(26, 24);
     //10)
+    logData(233, false, 1.25f);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, dollarsConverted, square1Area, cycle1Result, garyAge, lineWeightPen, tacoToppingsFit);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
