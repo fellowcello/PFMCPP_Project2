@@ -137,7 +137,7 @@ bool determineResult(bool resultA = false, bool resultB = false)
 /*
  5)
  */
-void mainMenu(bool isFront)
+void fillMainMenu(bool isFront)
 {
     ignoreUnused(isFront);
 }
@@ -213,7 +213,7 @@ int main()
     //4)
     auto cycle1Result = determineResult(true, false);
     //5)
-    mainMenu(false);
+    fillMainMenu(false);
     //6)
     loadRecipe(1000, 12000, 3000);
     //7)
