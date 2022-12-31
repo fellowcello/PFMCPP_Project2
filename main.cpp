@@ -110,7 +110,7 @@ void takeASeat(bool isFront, int maximumWeightLbs)
 /*
  2)
  */
-int yenToDollars(int yen)
+int convertYenToDollars(int yen)
 {
     ignoreUnused(yen);
     return {};
@@ -207,7 +207,7 @@ int main()
     //1)
     takeASeat(true, 100);
     //2)
-    auto dollarsConverted = yenToDollars(100);
+    auto dollarsConverted = convertYenToDollars(100);
     //3)
     auto square1Area = findArea(120, 240);
     //4)
